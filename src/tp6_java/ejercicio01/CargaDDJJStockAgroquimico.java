@@ -62,7 +62,7 @@ public class CargaDDJJStockAgroquimico {
             
             System.out.println("**********************************");
             do{
-                System.out.println("ingrese el codigo del agroquimico:");
+                System.out.print("ingrese el codigo del agroquimico:");
                 codigoAgroqimico = sc.nextLine();
                 int i = buscarAgroquimico(codigoAgroqimico);
                 if(i != -1){
@@ -124,7 +124,7 @@ public class CargaDDJJStockAgroquimico {
                     rellenarEspaciosSimple(String.valueOf(agroquimico.getCapacidadEnvase()),24)+ 
                     rellenarEspaciosSimple(String.valueOf(agroquimico.getCantidadEnvases()),17) +
                     rellenarEspaciosSimple(String.valueOf(agroquimico.getSubTotal()),10) +
-                    ((agroquimico.getNroLote().equals(""))? "----------":agroquimico.getNroLote()));
+                    ((agroquimico.getNroLote().equals(""))? "----------" : agroquimico.getNroLote()));
         }
         System.out.println(rellenarEspaciosSimple(" ", 64)+rellenarEspaciosSimple("Total", 17) + declaracion.getTotalKiloLitros());
         System.out.println("****************************************************************************************************************");
